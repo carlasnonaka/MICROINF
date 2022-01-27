@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20. Somar Intervalos de Números</title>
+</head>
+<body>
+   <script>
+       var n = Number(prompt("Digite a quantidade de casos testes: "));
+       var pare = 0
+       var soma = 0
+
+       while (pare<n) {
+        var x = Number(prompt("Digite o valor de x: "));
+        var y = Number(prompt("Digite o valor de y: "));
+        if (x<y || x == y) { 
+            for (var i = x+1; i<y; i++) {
+                if (i%2>0) {
+                soma = soma + i 
+            }    
+       } 
+                 document.write(soma + "<br>")
+                
+       } 
+       
+       else if (y<x) {
+            for (var i = y+1; i<x; i++) {
+                if (i%2>0) {
+                soma = soma + i
+              } }       
+              
+                document.write(soma + "<br>" )                
+       }
+        
+        pare++;
+        soma = 0
+
+       }
+    
+   </script> 
+</body>
+</html>

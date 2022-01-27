@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14.2 Excesso de Velocidade</title>
+</head>
+<body>
+    <script>
+        var vp = parseFloat(prompt("Digite a velocidade permitida: "))
+        var vc = parseFloat(prompt("Digite a velocidade do condutor: "))
+
+        if (vc<=vp) {
+            document.write("Sem Multa")
+        } else if (vc<=(1.2*vp)) {
+            document.write("Multa Leve")
+        } else {
+            document.write("Multa Grave")
+        }
+    </script>
+</body>
+</html>

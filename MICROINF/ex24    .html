@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--
+        Seção 13. Exercício 24
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 13. Exercício 24 </title>
+</head>
+<body>
+    <h1> Exercício 24</h1>
+
+    <p Id="Apresparimpar">  Resultado par ou impar </p>
+    <p Id="multa"> Resultado da multa </p>
+    <p Id="estacionamento"> Resultado do Estacionamento Rotativo </p>
+    <p Id="frut"> Resultado da Fruta aparecerá aqui </p>
+    <p Id="chi"> Resultado da Chinchilas aparecerá aqui </p>
+    <p Id="perf"> Resultado do número perfeito </p>
+    <p Id="estrela"> Resultado das estrelas </p>
+
+    <p>
+        Botão 1 = Par ou Impar <br>
+        Botão 2 = Excesso de Velocidade <br>
+        Botão 3 = Estacionamento Rotativo <br>
+        Botão 4 = Repete fruta <br>
+        Botão 5 = Calcula Chinchilas <br>
+        Botão 6 = Número perfeito <br>
+        Botão 7 = Exibe estrelas <br>
+    </p>
+
+    <button onclick="mFunc1()">Botão 1</button>
+    <button onclick="mFunc2()">Botão 2</button>
+    <button onclick="mFunc3()">Botão 3</button>
+    <button onclick="mFunc4()">Botão 4</button>
+    <button onclick="mFunc5()">Botão 5</button>
+    <button onclick="mFunc6()">Botão 6</button>
+    <button onclick="mFunc7()">Botão 7</button>
+<script>
+    
+    function mFunc1 () {
+        var n = parseInt(prompt("Digite um valor inteiro: "))
+
+        if (n % 2 == 0) {
+            document.getElementById("Apresparimpar").innerHTML = (n + " é Par")
+        } else {
+            document.getElementById("Apresparimpar").innerHTML = (n + " é Impar")
+        }
+       
+    }
+    function mFunc2 () {
+        var vp = parseFloat(prompt("Digite a velocidade permitida: "))
+        var vc = parseFloat(prompt("Digite a velocidade do condutor: "))
+
+        if (vc<=vp) {
+            document.getElementById("multa").innerHTML = ("Sem Multa")
+        } else if (vc<=(1.2*vp)) {
+            document.getElementById("multa").innerHTML = ("Multa Leve")
+        } else {
+            document.getElementById("multa").innerHTML = ("Multa Grave")
+        }
+    }
+    function mFunc3 () {
+        var m = parseFloat(prompt("Valor: "))
+
+       if(m>=3.0) {
+        document.getElementById("estacionamento").innerHTML =("Tempo: 120min <br> Troco: R$ " + (m-3.0).toFixed(2))
+       } else if (m>=1.75) {
+        document.getElementById("estacionamento").innerHTML =("Tempo: 60min <br> Troco: R$ " + (m-1.75).toFixed(2))
+       } else if (m>=1.0) {
+        document.getElementById("estacionamento").innerHTML =("Tempo: 30min <br> Troco: R$ " + (m-1.00).toFixed(2))
+       } else {
+        document.getElementById("estacionamento").innerHTML =("Valor Insuficiente")
+       }
+    }
+    function mFunc4 () {
+        var fruta = prompt("Digite o nome de uma fruta: ")
+        var rep = parseInt(prompt("Digite um número: "))
+        
+        for (i=0; i<rep; i++) {
+            document.getElementById("frut").innerHTML = (fruta + " * ")
+        }
+    }
+    function mFunc5 () {
+        var c = parseInt(prompt("Digite o número de Chinchilas: "));
+        var a = parseInt(prompt("Digite o número de anos: "));
+
+        for (var i=1;i<=a;i++) {  
+            if (i==1) {
+                document.getElementById("chi").innerHTML = (i + "º Ano: ", c + " chinchilas <br>");  
+            } else {
+                document.getElementById("chi").innerHTML = (i + "º Ano: ", (c*3) + " chinchilas <br>");
+            c = (c*3);
+            }
+        }
+    }
+    function mFunc6 () {
+        var number = parseInt(prompt("Digite um número: "));
+		var lista=[0];
+		var soma = 0; 
+		var x=0;
+		var divisores=""; 
+		
+        for (var i=1;i<number;i++) {
+            if (number%i==0)
+			{
+            lista [x]= i;
+			divisores += i +" , ";
+            soma = soma + i;
+			x+=1;
+			}
+        } 
+
+        if (soma==number) {
+            document.getElementById("perf").innerHTML =("Divisores de "+ number + ": " + divisores + " Soma ( " + soma + " ) ")
+            document.getElementById("perf").innerHTML =(n + " é um número perfeito");
+        } else {
+            document.getElementById("perf").innerHTML =("Divisores de "+ number + ": " + divisores + " Soma ( " + soma + " ) ")
+            document.getElementById("perf").innerHTML =(n + " não é um número perfeito");
+        }
+    }
+    function mFunc7 () {
+        var linhas = parseInt(prompt("Digite o número de Linhas : "));
+        var estrelas = " * " ;
+        for (var i=0; i<linhas; i++) {
+            document.getElementById("estrela").innerHTML = (estrelas + "<br>");
+            estrelas = estrelas + " * ";
+        }
+    } 
+    </script>
+</body>
+</html>

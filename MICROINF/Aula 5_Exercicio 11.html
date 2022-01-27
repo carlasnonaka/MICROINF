@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11. Validando dados</title>
+</head>
+<body>
+<script>
+    var A = parseInt(prompt('Digite o primeiro número: '))
+    var B = parseInt(prompt('Digite o segundo número: '))
+    var C = parseInt(prompt('Digite o terceiro número: '))
+    var D = parseInt(prompt('Digite o quarto número: '))
+    var CD = C+D
+    var AB = A+B
+    var DivA = A % 2
+
+    if (B>C && D>A && CD>AB && C>0 && D>0 && DivA==0) { 
+         document.write('Valores aceitos')
+    } else {
+        document.write('Valores não aceitos')
+    }
+</script> 
+</body>
+</html>

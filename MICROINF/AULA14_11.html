@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 07 - Estrutura de Repetição</title>
+</head>
+<body>
+    <h1> Estrutura de Repetição - Laço FOR</h1>
+
+    <script>
+        var carro1 = "Lamburguine 1";
+        var carro2 = "Lamburguine 2";
+        var carro3 = "Lamburguine 3";
+        var i = 0;
+        var ftammatriz = 0;
+        var vmatriz = ["Valo 01", "Valo 02", "Valo 03"];
+
+        ftammatriz = vmatriz.length;
+        document.write("O tamanho da matriz é: ", ftammatriz + "<br>");
+        document.write("Valor da posição 0 da matriz ", vmatriz[0]+ "<br>");
+        document.write("Valor da posição 1 da matriz ", vmatriz[1]+ "<br>");
+        document.write("Valor da posição 2 da matriz ", vmatriz[2]+ "<br>");
+
+        for (i=0; i<ftammatriz; i++) {
+            document.write("Valor da posição "+ i + " da matriz é ", vmatriz[i]+ "<br>")
+        }
+
+    </script>
+</body>
+</html>

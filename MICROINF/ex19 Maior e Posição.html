@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19. Maior e Posição</title>
+</head>
+<body>
+    <script>
+        var vetor = [];
+        var maior = 0;
+        var posicao = 0;
+
+        for (var i=0; i<5; i++) {
+            vetor[i] = Number(prompt("Digite um número: "));
+            if (vetor[i]>maior) {
+            maior = vetor[i]
+            posicao = i+1
+            }
+        }
+        document.write(maior + "<br>" + posicao)
+    </script>
+</body>
+</html>

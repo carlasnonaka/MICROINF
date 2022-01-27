@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var A = parseFloat(prompt("Digite A: "))
+    var B = parseFloat(prompt("Digite B: "))
+    var C = parseFloat(prompt("Digite C: "))
+
+    var op = Number(prompt(" Digite uma opção: 1. trapezio 2. circulo 3. retangulo 4. nenhuma das opções"))
+    if (op==1) {
+        tra = (A + B)*C/2
+        document.write("TRAPÉZIO = "+ tra.toFixed(3)+"<br>")
+    } else if (op==2) {
+        cir = Math.PI.toFixed(5)*Math.pow(C,2)
+        document.write("CÍRCULO = "+ cir.toFixed(3)+"<br>")
+    } else if (op==3) {
+        ret = A * B
+        document.write("RETÂNGULO = "+ ret.toFixed(3)+"<br>")
+    } else {
+        document.write("Nenhuma das opções acima")
+    }
+</script>
+</body>
+</html>

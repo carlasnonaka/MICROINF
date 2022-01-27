@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12. Fórmula de Bhaskara</title>
+</head>
+<body>
+    <script>
+        var A = parseFloat(prompt("Digite A: "))
+        var B = parseFloat(prompt("Digite B: "))
+        var C = parseFloat(prompt("Digite C: "))
+
+        if (A==0) {
+            document.write("Impossível calcular") 
+        } else {
+        delta = ((Math.pow(B,2))-(4*A*C))
+        
+
+        if (delta>=0) {
+
+        x1 = (Math.sqrt(delta) - B) / (2*A)
+        x2 = (-(Math.sqrt(delta)) - B) / (2*A)
+        
+        document.write("R1 = "+ x1.toFixed(5) + "<br>"+ "R2 = "+ x2.toFixed(5) + "<br>")
+        } else {
+        document.write("Impossível calcular") 
+                   }
+        }
+    </script>
+</body>
+</html>

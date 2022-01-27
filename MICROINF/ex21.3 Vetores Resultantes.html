@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 9: Exercício 21.3 Vetores Resultantes</title>
+</head>
+<body>
+   <script>
+        var v1 = []
+        var pos = []
+        var neg = []
+
+        for (var i=0; i<=4; i++) {
+        var n = Number (prompt("Digite os cinco elementos do vetor 1: "))
+        v1.push(n)
+
+        if (v1[i]>=0) {
+            pos.push(v1[i])
+        }
+        else {
+            neg.push(v1[i])
+        }
+        }
+        document.write ("Vetor: " + v1 + "<br>")
+        document.write ("Positivos: " + pos + "<br>")
+        document.write ("Negativos: " + neg + "<br>")
+   </script> 
+</body>
+</html>

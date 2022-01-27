@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br"> 
+
+     
+
+<head> 
+
+  
+
+     
+
+</head> 
+
+<body> 
+
+    <script> 
+
+        var testes = Number(prompt("Digite a quantidade de testes: ")); 
+
+        var x = 0; 
+
+        var y = 0; 
+
+        var soma = 0; 
+
+        var menor = 0; 
+
+        var maior = 0; 
+
+         
+
+        for(let i = 1; i <= testes; i++) { 
+
+            x = Number(prompt("Digite um número: ")); 
+
+            y = Number(prompt("Digite um número: ")); 
+
+            if(x > y) { 
+
+                maior = x; 
+
+                menor = y + 1; 
+
+            }  
+
+            else { 
+
+                maior = y; 
+
+                menor = x + 1; 
+
+            } 
+
+            for(menor; menor < maior; menor++) { 
+
+                if(menor % 2 > 0) { 
+
+                    soma = soma + menor; 
+
+                } 
+
+            } 
+
+            document.write(soma, '<br>'); 
+
+            soma = 0; 
+
+        } 
+
+         
+
+         
+
+  
+
+    </script> 
+
+     
+
+</body> 
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--
+        Seção 09 - Array
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 09 - Array</title>
+</head>
+<body>
+    <h1> Array e Método de Arrays</h1>
+
+    <p Id="ApresVetor">  Aqui será apresentado o valor do vetor </p>
+    <p Id="ApresTam"> Aqui será apresentado o tamanho do vetor </p>
+
+    <p>
+        Botão 1 = Apresentar o Vetor <br>
+        Botão 2 = Inserir Novos Valores <br>
+        Botão 3 = Eliminar último Valor pop() <br>
+        Botão 4 = Inserir um Valor no final push() <br>
+        Botão 5 = Elimina o primeiro elemento shift() <br>
+        Botão 6 = Inserir um novo elemento na primeira posição do vetor unshift() <br>
+        Botão 7 = Deleta o conteúdo de uma determinada posição delete <br>
+        Botão 8 = Apaga elementos (conteúdo e índice) a partir do indice que indicar e insere elementos novos splice() <br>
+    </p>
+
+    <button onclick="mFunc1()">Botão 1</button>
+    <button onclick="mFunc2()">Botão 2</button>
+    <button onclick="mFunc3()">Botão 3</button>
+    <button onclick="mFunc4()">Botão 4</button>
+    <button onclick="mFunc5()">Botão 5</button>
+    <button onclick="mFunc6()">Botão 6</button>
+    <button onclick="mFunc7()">Botão 7</button>
+    <button onclick="mFunc8()">Botão 8</button>
+<script>
+    var vMatriz = ["Valor 01", " Valor 02", " Valor 03"]
+    var x = " "
+    var vIndice = 0
+    var vAcao = 0
+    var vArray = []
+    function mFunc1 () {
+        document.getElementById("ApresVetor").innerHTML = vMatriz
+        document.getElementById("ApresTam").innerHTML = vMatriz.length
+    }
+    function mFunc2 () {
+        vMatriz [0] = prompt ("Digite o Valor 1: ")
+        vMatriz [1] = prompt ("Digite o Valor 2: ")
+        vMatriz [2] = prompt ("Digite o Valor 3: ")
+    }
+    function mFunc3 () {
+        vMatriz.pop()
+    }
+    function mFunc4 () {
+        x = prompt ("Digite um valor: ")
+        vMatriz.push(x)
+    }
+    function mFunc5 () {
+        vMatriz.shift()
+    }
+    function mFunc6 () {
+        x = prompt ("Digite um valor: ")
+        vMatriz.unshift(x)
+    }
+    function mFunc7 () {
+        x = prompt ("Digite a posição de deleção: ")
+        delete vMatriz[x]
+    } 
+    function mFunc8 () {
+        vIndice = prompt ("A partir de qual índice do vetor: ")
+        vAcao = prompt ("Quantos elementos serão eliminados? ")
+        vArray[0] = prompt(" Valor que deseja adicionar: ")
+        vMatriz.splice(vIndice, vAcao, vArray[0])
+        }
+     
+    </script>
+</body>
+</html>

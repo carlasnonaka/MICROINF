@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 9: Exercício 21.4 Ordenação descrecente</title>
+</head>
+<body>
+    <script>
+        var v1 = []
+        var des = []
+        var mai = 0
+        var men = mai
+
+        for (var i=0;i<5;i++){
+        var n = Number (prompt("Digite um número para compor o vetor: "))
+        v1.push(n)
+        if(v1[i]>mai) {
+            mai = v1[i]}
+        } 
+        des[0] = mai
+
+        document.write("Vetor 1: " + v1 + "<br>")
+        document.write("Decrescente: " + v1.sort().reverse() + "<br>")
+
+    </script>
+</body>
+</html>

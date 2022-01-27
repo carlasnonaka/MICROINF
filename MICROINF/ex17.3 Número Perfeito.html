@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execício 17.3 Número Perfeito</title>
+</head>
+<body>
+    <script>
+        var number = parseInt(prompt("Digite um número: "));
+		var lista=[0];
+		var soma = 0; 
+		var x=0;
+		var divisores=""; 
+		
+        for (var i=1;i<number;i++) {
+            if (number%i==0)
+			{
+            lista [x]= i;
+			divisores += i +" , ";
+            soma = soma + i;
+			x+=1;
+			}
+        } 
+
+        if (soma==number) {
+            document.write("Divisores de "+ number + ": " + divisores + " Soma ( " + soma + " ) ")
+            document.write(n + " é um número perfeito");
+        } else {
+            document.write("Divisores de "+ number + ": " + divisores + " Soma ( " + soma + " ) ")
+            document.write(n + " não é um número perfeito");
+        }
+
+    </script>
+</body>
+</html>

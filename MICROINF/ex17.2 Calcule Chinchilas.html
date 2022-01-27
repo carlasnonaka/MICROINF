@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17.2 Calcule Chinchilas</title>
+</head>
+<body>
+    <script>
+        var c = parseInt(prompt("Digite o número de Chinchilas: "));
+        var a = parseInt(prompt("Digite o número de anos: "));
+
+        for (var i=1;i<=a;i++) {  
+            if (i==1) {
+                document.write(i + "º Ano: ", c + " chinchilas <br>");  
+            } else {
+            document.write(i + "º Ano: ", (c*3) + " chinchilas <br>");
+            c = (c*3);
+            }
+        }
+    </script>
+</body>
+</html>
